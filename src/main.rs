@@ -1,6 +1,4 @@
-pub mod solvestring{
-
-    pub fn solve_string(mut input: String) -> f32 {
+pub fn main(mut input: String) -> f32 {
         //declares stuff.
         let mut answer: f32 = 404.0;
         let mut operator_places = vec![];
@@ -173,7 +171,7 @@ pub mod solvestring{
         println!("{}", answer);
         return answer;
 
-    }
+}
 
     //determines if the characters in a string are numeric. written by me
     fn is_string_numeric(str: String) -> bool {
@@ -184,4 +182,3 @@ pub mod solvestring{
         }
         return true;
     }
-}
