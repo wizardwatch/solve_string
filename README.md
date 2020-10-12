@@ -3,22 +3,37 @@ A python eval equivalent written in rust.
 This software is in ALPHA. Tons of edge cases will not work and some things like imaginary numbers have yet to be implemented.
 
 Current support:
+
 multiple operators written solved in pemdas.
+
 operators supported:
+
 - or ~ subtraction
+
 * multiplication
+
 + addition
+
 / division
+
 ^ exponent
-currently their is not root operator, however you can use a exponent fraction in place of one.
+
+currently there is not root operator, however you can use a exponent fraction in place of one.
+
 double negatives are supported
+
 Parenthesis are supported, however multiplication without a operator, ie 9(5 + 1), is NOT supported. 
 
 Known issues:
+
 multiplication without a operator, ie 9(5 + 1).
+
 No unit tests
+
 negative edge cases: report and document these if you find them.
+
 imaginary numbers.
+
 precision greater than f32.
 
 
