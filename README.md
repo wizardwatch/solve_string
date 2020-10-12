@@ -4,21 +4,21 @@ This software is in ALPHA. Tons of edge cases will not work and some things like
 
 Current support:
 
-multiple operators written solved in pemdas.
+- multiple operators written solved in pemdas.
 
-operators supported:
+- operators supported:
 
-- subtraction *-* or ~ 
-- multiplication * 
-- addition + 
-- division / 
-- exponent ^ 
+- - subtraction *-* or ~ 
+- - multiplication * 
+- - addition + 
+- - division / 
+- - exponent ^ 
 
-currently there is not root operator, however you can use a exponent fraction in place of one.
+- currently there is not root operator, however you can use a exponent fraction in place of one.
 
-double negatives are supported
+- double negatives
 
-Parenthesis are supported, however multiplication without a operator, ie 9(5 + 1), is NOT supported. 
+- Parenthesis are supported*
 
 Known issues:
 
