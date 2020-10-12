@@ -8,15 +8,15 @@ multiple operators written solved in pemdas.
 
 operators supported:
 
-- or ~ subtraction
+- subtraction *-* or ~ 
 
-* multiplication
+- multiplication * 
 
-+ addition
+- addition + 
 
-/ division
+- division / 
 
-^ exponent
+- exponent ^ 
 
 currently there is not root operator, however you can use a exponent fraction in place of one.
 
