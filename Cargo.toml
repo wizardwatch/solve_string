@@ -1,6 +1,6 @@
 [package]
 name = "solve_string"
-version = "0.1.0"
+version = "0.1.1"
 authors = ["wyatt osterling <wyatt.osterling@hotmail.com>"]
 edition = "2018"
 description = "A package with the goal of implementing python eval functionality in rust."
