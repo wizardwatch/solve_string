@@ -225,3 +225,48 @@ pub fn solve_string(mut input: String) -> f32 {
         }
         return true;
     }
+    fn old_parser(new_input: String) -> std::vec::Vec<char>{
+      let mut operator_places = Vec::new();
+      let mut current_letter;
+      for i in 0..new_input.len() {
+        current_letter = new_input[i..i + 1].chars().next().unwrap();
+        if current_letter == exponent {
+          operator_places.push(exponent);
+        }
+                 }
+                 for i in 0..new_input.len() {
+                 current_letter = new_input[i..i + 1].chars().next().unwrap();
+                   if current_letter == multiplication {
+                     operator_places.push(multiplication);
+                   }
+                   else if current_letter == division {
+                     operator_places.push(division);
+                   }
+                 }
+                 for i in 0..new_input.len() {
+                   current_letter = new_input[i..i + 1].chars().next().unwrap();
+                   if current_letter == addition {
+                     operator_places.push(addition);
+                   }
+                   else if current_letter == subtraction {
+                     operator_places.push(subtraction);
+               }
+      }
+      return operator_places
+    }
+#[cfg(test)]
+mod tests {
+    use super::*;
+    #[test]
+    fn is_string_numeric_test(){
+      let postive_test = is_string_numeric("999".to_string());
+      assert_eq!(postive_test, true);
+    }
+    #[test]
+    fn old_parser_test(){
+      let parser_test = old_parser("*~^+".to_string());
+      let correct_output = vec!['^', '*', '~', '+'];
+      let equality = parser_test == correct_output;
+      assert_eq!(parser_test, correct_output);
+    }
+}
