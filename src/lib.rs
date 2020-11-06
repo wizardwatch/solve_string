@@ -225,6 +225,25 @@ pub fn solve_string(mut input: String) -> f32 {
         }
         return true;
     }
+    fn new_parser(new_input: String) -> std::vec::Vec<char>{
+        let desired_input_list_bias_catagories = [3, 1, 2, 2];
+        let mut operator_places = Vec::new();
+        let desired_input_list = [exponent, multiplication, division, addition, subtraction];
+        let mut i = 0;
+        let mut i2 = 0;
+        while i <= desired_input_list_bias_catagories[0] {
+          //loop though all the characters in the input
+          for character in new_input.chars() {
+            //if the character is a desired input add it to the list of unsorted desired inputs.
+            if true == desired_input_list[i..i+desired_input_list_bias_catagories[i2+1]].contains(&character) {
+              operator_places.push(character);
+            }
+          }
+          i = i + desired_input_list_bias_catagories[i2+1];
+          i2 = i2 +1;
+        }
+        return operator_places;
+    }
     fn old_parser(new_input: String) -> std::vec::Vec<char>{
       let mut operator_places = Vec::new();
       let mut current_letter;
@@ -267,6 +286,13 @@ mod tests {
       let parser_test = old_parser("*~^+".to_string());
       let correct_output = vec!['^', '*', '~', '+'];
       let equality = parser_test == correct_output;
+      assert_eq!(parser_test, correct_output);
+    }
+    #[test]
+    fn new_parser_test(){
+      let parser_test = new_parser("*~^+".to_string());
+      let correct_output = vec!['^', '*', '~', '+'];
+      println!("{:?}", parser_test);
       assert_eq!(parser_test, correct_output);
     }
 }
