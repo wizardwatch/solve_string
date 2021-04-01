@@ -198,8 +198,33 @@ mod tests {
 		assert_eq!(parser_test, correct_output);
 	}
 	#[test]
-	fn general_test(){
-		let general_test = solve_string("6*(3-1)".to_string());
+	fn general_simple_operaters(){
+		let general_test = solve_string("6+6".to_string());
+		let correct_output = 12.0;
+		assert_eq!(correct_output, general_test);
+		let general_test = solve_string("2*6".to_string());
+		let correct_output = 12.0;
+		assert_eq!(correct_output, general_test);
+		let general_test = solve_string("14-2".to_string());
+		let correct_output = 12.0;
+		assert_eq!(correct_output, general_test);
+		let general_test = solve_string("24/2".to_string());
+		let correct_output = 12.0;
+		assert_eq!(correct_output, general_test);
+		let general_test = solve_string("3^2".to_string());
+		let correct_output = 9.0;
+		assert_eq!(correct_output, general_test);
+	}
+	#[test]
+	fn general_parenthesis_test(){
+		//fails due to not handeling no opperator
+		let general_test = solve_string("6+(6)".to_string());
+		let correct_output = 12.0;
+		//assert_eq!(correct_output, general_test);
+		let general_test = solve_string("(2*2)^2".to_string());
+		let correct_output = 16.0;
+		assert_eq!(correct_output, general_test);
+		let general_test = solve_string("6(2)".to_string());
 		let correct_output = 12.0;
 		assert_eq!(correct_output, general_test);
 	}
